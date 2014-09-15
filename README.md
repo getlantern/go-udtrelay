@@ -1,4 +1,5 @@
-go-udtrelay provides a Go convenience API to the
+go-udtrelay provides a Go convenience API to shangdawei's
+[fork](https://github.com/shangdawei/udtrelay) of the 
 [UDT Gateway System](http://sourceforge.net/projects/udtgate/).
 
 To install:
