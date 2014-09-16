@@ -50,7 +50,7 @@ func (server *Server) Run() error {
 // Run runs the client.  This function blocks until the client stops running.
 // The client will automatically stop if the current program receives a SIGINT.
 func (client *Client) Run() error {
-	params := []string{"-C", strconv.Itoa(client.SOCKSPort), strconv.Itoa(client.Port), client.PeerAddr}
+	params := []string{"-C", "-N", "-N", strconv.Itoa(client.SOCKSPort), strconv.Itoa(client.Port), client.PeerAddr}
 	client.DialWith = socks.DialSocksProxy(socks.SOCKS4, fmt.Sprintf("127.0.0.1:%d", client.SOCKSPort))
 	return client.run(params, client.DebugOut)
 }
